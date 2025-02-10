@@ -1,0 +1,24 @@
+.book-details {
+  .age {
+    background-color: saddlebrown;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+
+  }
+  .price-and-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .on-sale {
+      background-color: blue;
+      color: white;
+      border-radius: 5px;
+      padding: 3px;
+      transform: rotate(357deg);
+
+    }
+
+  }
+
+}
