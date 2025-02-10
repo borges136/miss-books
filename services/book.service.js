@@ -1,4 +1,4 @@
-import { loadFromStorage, makeId, saveToStorage } from './util.service.js'
+import { loadFromStorage, makeId, saveToStorage, makeLorem, getRandomIntInclusive} from './util.service.js'
 import { storageService } from './async-storage.service.js'
 
 const BOOK_KEY = 'bookDB'
@@ -44,8 +44,10 @@ function save(book) {
     }
 }
 
-function getEmptyBook(title = '', listPrice = {amount: ''}) {
-    return { title, listPrice }
+function getEmptyBook(title = '', listPrice = {amount: '', currencyCode: 'USD'}) {
+    let thumbnail = `https://www.coding-academy.org/books-photos/${getRandomIntInclusive(1,15)}.jpg`
+    let authors = [makeLorem(50), makeLorem(30)]
+    return { title, listPrice, thumbnail, authors}
 }
 
 

@@ -60,7 +60,7 @@ export function BookEdit() {
         <section className={`book-edit ${loadingClass}`}>
             <h1>{bookId ? 'Edit' : 'Add'} Book</h1>
             <form onSubmit={onSaveBook}>
-                <label htmlFor="title">Vendor</label>
+                <label htmlFor="title">Title</label>
                 <input value={title} onChange={handleChange} type="text" name="title" id="title" />
 
                 <label htmlFor="listPrice">List Price</label>
