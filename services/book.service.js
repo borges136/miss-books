@@ -46,7 +46,7 @@ function save(book) {
 
 function getEmptyBook(title = '', listPrice = {amount: '', currencyCode: 'USD'}) {
     let thumbnail = `https://www.coding-academy.org/books-photos/${getRandomIntInclusive(1,15)}.jpg`
-    let authors = [makeLorem(50), makeLorem(30)]
+    let authors = [makeLorem(2), makeLorem(3)]
     return { title, listPrice, thumbnail, authors}
 }
 

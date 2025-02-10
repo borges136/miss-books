@@ -53,6 +53,11 @@ export function BookEdit() {
         setBookToEdit((prevBook) => ({ ...prevBook, [field]: value }))
     }
 
+    function handleListPriceChange({ target}) {
+        setBookToEdit((prevBook) => ({...prevBook, listPrice: {...prevBook.listPrice, amount: target.value}}))
+    }
+
+
 
     const { title, listPrice } = bookToEdit
     const loadingClass = isLoading ? 'loading' : ''
@@ -64,7 +69,7 @@ export function BookEdit() {
                 <input value={title} onChange={handleChange} type="text" name="title" id="title" />
 
                 <label htmlFor="listPrice">List Price</label>
-                <input value={listPrice} onChange={handleChange} type="number" name="listPrice" id="listPrice" />
+                <input value={listPrice.amount} onChange={handleListPriceChange} type="number" name="listPrice" id="listPrice" />
                 <section className="btns flex">
                     <button>Save</button>
                     <button type="button" className="back-btn" ><Link to="/book">Back</Link></button>
